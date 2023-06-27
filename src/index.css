@@ -1,13 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #091921;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clocks-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form {
+  display: inline-flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.form-label {
+  font-size: 24px;
+  color: #ffc600;
+}
+
+.form-control input {
+  width: 250px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.form input {
+  border: 1px solid #ffc600;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: #ffc600;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-control__name {
+  padding: 10px;
+}
+
+.form-control__user-timezone,
+.form-control__button-add {
+  padding: 10px;
+}
+
+.form-control__button-add {
+  background-color: #ffffff;
+}
+
+.clock-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.clock {
+  width: 100%;
+  height: 290px;
+}
+
+.clock-box {
+  position: relative;
+  width: 300px;
+}
+
+.clock-face__circle {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 9;
+}
+
+.clock-face__hour-marks {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 9;
+}
+
+.clock-face__mid-circle {
+  fill: #ffffff;
+}
+
+.clock-hour__hour-arm {
+  fill: none;
+  stroke: #ffc600;
+  stroke-width: 17;
+}
+
+.clock-minute__minute-arm {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 11;
+}
+
+.clock-second__second-arm {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 4;
+}
+
+.clock-sizing-box {
+  fill: none;
+}
+
+.clock-hour,
+.clock-minute,
+.clock-second {
+  transform-origin: 300px 300px;
+}
+
+.clock__delete {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #920606;
+  border-radius: 50%;
+  text-decoration: none;
+  user-select: none;
+}
+
